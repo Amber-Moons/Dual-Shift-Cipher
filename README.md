@@ -98,4 +98,4 @@ To decipher you will need an enciphered message as well as the key that was used
 6. Repeat this for each letter by moving both deciphering characters one left each time and using the character one plaintext charicter until the entire message is deciphered. Now charicter 1 will be G(7) while charicter 2 will
  be V(22) which 22 - 7 is O(15). Now our example should be deciphered as:
 
-*THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG*
+*THEQUICKBROWNFOXJUMPSOVERTHELAZYDOG*
