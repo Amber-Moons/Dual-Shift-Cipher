@@ -11,7 +11,7 @@
 
 ## About:
 
-Dual Shift Cipher is a pen paper cipher that while time consuming is difficult to break. It's widely configurable to be able to include anything from normal characters to abstract symbols. This is done via adding adjacent
+Dual Shift Cipher is a pen paper cipher that while time consuming is difficult to break, requiring extremely long messages to consistently break. It's widely configurable to be able to include anything from normal characters to abstract symbols. This is done via adding adjacent
 letters key value and the inverse for enciphering and deciphering. This doc will be split into two parts, firstly the instructions for how to use the solver program, and secondly, how to use the cipher on paper.
 
 ## Dual Shift Cipher solver instructions:
