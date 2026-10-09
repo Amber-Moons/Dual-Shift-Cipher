@@ -1,57 +1,30 @@
 
-def encodeInt(int1, int2):
-    encodedInt = int1 + int2
-    if encodedInt > codeNum:
-        encodedInt -= codeNum
-    return encodedInt
 
-def decodeInt(int1, int2):
-    decodedInt = int1 - int2
-    if decodedInt < 1:
-        decodedInt += codeNum
-    return decodedInt
+DEFAULT_KEY = "ABCDEFGHIJKLMNOPQRSTUVWXYZ,.?!1234567890"
+Plain1 = "THEQUICKBROWNFOXJUMPSJOVERTHELAZYDOG"
+Keylen = 40
+Keyadd = list(DEFAULT_KEY)
+Key = [None]
+Key.extend(Keyadd)
 
-def findfromInt(outPutInt):
-    encodedLet = key[outPutInt]
-    outPut.co(encodedLet)
-
-def type():
-    typeV = input("Type 1 for encrypt, 2 for decrypt: ")
-    if int(typeV) == 1:
-        return 1
-    elif int(typeV) == 2:
-        return 2
-    else:
-        print("Type a valid number")
-        return 3
-
-def plainGet():
-    plainTxtIn = input("Enter plain text: ")
-    plainTxtList = list(plainTxtIn)
-    plainTxtClear = [s for s in plainTxtList if s.strip()]
-    keyfail = set(plainTxtClear) - set(keySort)
-    if keyfail:
-        print(f"Plain text contains values not in key: {keyfail}")
-    return plainTxtClear
+Plain = list(Plain1)
+def Encipher():
+    Enc2 = Plain[1]
+    Enc1 = Plain.pop(0)
+    Enc1n = Key.index(Enc1)
+    Enc2n = Key.index(Enc2)
+    Encnu = Enc1n + Enc2n
+    if Encnu > Keylen:
+        Encnu = Encnu - Keylen
+    Enclet = Key[Encnu]
+    return Enclet
+Cipherout = []
+Messagelen = len(Plain)
+while Messagelen > 1:
     
-        
-keyBase = [None]
-key = list("abcdefghijlmnopqrstuvwxyz")
-#key = input("Enter key: ")
-keySort = keyBase + key
-testkey = (len(set(keySort)) == len(keySort))
-if testkey == False:
-    print("Key contains duplicates please try again")
-codeNum = len(keySort) - 1
-typeV = 3
-plainText = 0
-while typeV == 3:
-    typeV = type()
-if typeV == 1:
-    plainFail = 1
-    while plainFail == 1:
-        plainText = plainGet()
-        if plainText != 0:
-            plainFail = 0
-print(plainText)
-quit
+    Ciphnxt = Encipher()
+    Messagelen -= 1
+    Ciphersec = list(Ciphnxt)
+    Cipherout.extend(Ciphersec)
+Out = "".join(Cipherout)
+print (Out)
