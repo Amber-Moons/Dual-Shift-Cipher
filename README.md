@@ -99,3 +99,7 @@ To decipher you will need an enciphered message as well as the key that was used
  be V(22) which 22 - 7 is O(15). Now our example should be deciphered as:
 
 *THEQUICKBROWNFOXJUMPSOVERTHELAZYDOG*
+
+## Vulnerabilities
+
+Firstly the Cipher is vulnerable to known-plaintext attacks, high frequency words such as 'the' will have the first two letters be the same across the entire message. Breaking just a few words can allow attackers to find other parts of the key and thus decipher that message and any others using the same key. The problem with this is it requires either a extremely long message, or a large amount of messages sent with the same key. The lowest character amount that was able to be broken this was 2932 characters however its likely possible to devise a script to do this automatically and potentially with less sample text.
